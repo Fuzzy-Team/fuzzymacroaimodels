@@ -1,5 +1,5 @@
 program(1.0)
-[buildInfo = dict<tensor<string, []>, tensor<string, []>>({{"coremlc-component-MIL", "3520.4.1"}, {"coremlc-version", "3520.5.1"}, {"coremltools-component-torch", "2.8.0"}, {"coremltools-source-dialect", "TorchScript"}, {"coremltools-version", "9.0"}})]
+[buildInfo = dict<tensor<string, []>, tensor<string, []>>({{"coremlc-component-MIL", "3520.4.1"}, {"coremlc-version", "3520.5.1"}, {"coremltools-component-torch", "2.7.0"}, {"coremltools-source-dialect", "TorchScript"}, {"coremltools-version", "9.0"}})]
 {
     func main<ios15>(tensor<fp32, [1, 3, 480, 992]> image) {
             tensor<fp32, []> image__scaled___y_0 = const()[name = tensor<string, []>("image__scaled___y_0"), val = tensor<fp32, []>(0x1.010102p-8)];
@@ -1240,6 +1240,6 @@ program(1.0)
             tensor<fp16, [1, 300, 1]> var_1550_to_fp16 = cast(dtype = conf_to_fp16_dtype_0, x = var_1550)[name = tensor<string, []>("cast_15")];
             tensor<fp16, [1, 300, 6]> var_1556_cast_fp16 = concat(axis = var_1240, interleave = var_1556_interleave_0, values = (boxes_cast_fp16, scores_cast_fp16, var_1550_to_fp16))[name = tensor<string, []>("op_1556_cast_fp16")];
             tensor<string, []> var_1556_cast_fp16_to_fp32_dtype_0 = const()[name = tensor<string, []>("op_1556_cast_fp16_to_fp32_dtype_0"), val = tensor<string, []>("fp32")];
-            tensor<fp32, [1, 300, 6]> var_1556 = cast(dtype = var_1556_cast_fp16_to_fp32_dtype_0, x = var_1556_cast_fp16)[name = tensor<string, []>("cast_14")];
-        } -> (var_1556);
+            tensor<fp32, [1, 300, 6]> var_1445 = cast(dtype = var_1556_cast_fp16_to_fp32_dtype_0, x = var_1556_cast_fp16)[name = tensor<string, []>("cast_14")];
+        } -> (var_1445);
 }
