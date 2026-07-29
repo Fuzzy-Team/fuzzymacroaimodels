@@ -1,0 +1,99 @@
+[
+  {
+    "shortDescription" : "Ultralytics YOLO26n model trained on \/content\/blooms-petals\/dataset\/data_colab.yaml",
+    "metadataOutputVersion" : "3.0",
+    "outputSchema" : [
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Float32",
+        "formattedType" : "MultiArray (Float32 1 × 300 × 6)",
+        "shortDescription" : "",
+        "shape" : "[1, 300, 6]",
+        "name" : "var_1440",
+        "type" : "MultiArray"
+      }
+    ],
+    "version" : "8.4.47",
+    "modelParameters" : [
+
+    ],
+    "author" : "Ultralytics",
+    "specificationVersion" : 6,
+    "storagePrecision" : "Float16",
+    "license" : "AGPL-3.0 License (https:\/\/ultralytics.com\/license)",
+    "mlProgramOperationTypeHistogram" : {
+      "Transpose" : 1,
+      "ReduceMax" : 1,
+      "UpsampleNearestNeighbor" : 2,
+      "Sub" : 2,
+      "FloorDiv" : 2,
+      "Silu" : 87,
+      "Sigmoid" : 1,
+      "Reshape" : 13,
+      "Topk" : 2,
+      "Matmul" : 4,
+      "Cast" : 3,
+      "Softmax" : 2,
+      "Split" : 13,
+      "Concat" : 24,
+      "Add" : 21,
+      "Tile" : 2,
+      "GatherAlongAxis" : 2,
+      "ExpandDims" : 3,
+      "GatherNd" : 1,
+      "Conv" : 102,
+      "Stack" : 1,
+      "MaxPool" : 3,
+      "Mul" : 5
+    },
+    "computePrecision" : "Mixed (Float16, Float32, Int32)",
+    "stateSchema" : [
+
+    ],
+    "isUpdatable" : "0",
+    "availability" : {
+      "macOS" : "12.0",
+      "tvOS" : "15.0",
+      "visionOS" : "1.0",
+      "watchOS" : "8.0",
+      "iOS" : "15.0",
+      "macCatalyst" : "15.0"
+    },
+    "modelType" : {
+      "name" : "MLModelType_mlProgram"
+    },
+    "inputSchema" : [
+      {
+        "height" : "768",
+        "colorspace" : "RGB",
+        "isOptional" : "0",
+        "width" : "768",
+        "isColor" : "1",
+        "formattedType" : "Image (Color 768 × 768)",
+        "hasSizeFlexibility" : "0",
+        "type" : "Image",
+        "shortDescription" : "",
+        "name" : "image"
+      }
+    ],
+    "userDefinedMetadata" : {
+      "batch" : "1",
+      "com.github.apple.coremltools.version" : "9.0",
+      "docs" : "https:\/\/docs.ultralytics.com",
+      "imgsz" : "[768, 768]",
+      "names" : "{0: 'bloom', 1: 'petal'}",
+      "channels" : "3",
+      "com.github.apple.coremltools.conversion_date" : "2026-07-28",
+      "stride" : "32",
+      "date" : "2026-07-28T23:17:11.317494",
+      "args" : "{'batch': 1, 'half': True, 'int8': False, 'dynamic': False, 'nms': False}",
+      "com.github.apple.coremltools.source_dialect" : "TorchScript",
+      "com.github.apple.coremltools.source" : "torch==2.7.0",
+      "task" : "detect",
+      "end2end" : "True"
+    },
+    "generatedClassName" : "Blooms_and_petals_light",
+    "method" : "predict"
+  }
+]
