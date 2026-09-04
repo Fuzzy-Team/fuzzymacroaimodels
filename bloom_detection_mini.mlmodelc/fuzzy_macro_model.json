@@ -1,0 +1,6 @@
+{
+  "input_name": "image",
+  "output_name": "var_1440",
+  "input_size": 512,
+  "output_layout": "xyxy_confidence_class"
+}
